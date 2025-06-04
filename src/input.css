@@ -5,15 +5,4 @@
   --color-primary: #1e3a8a;
   --color-primary-contrast: white;
 }
-@layer base {
-  img:hover {
-    transform: scale(1.05);
-    transform-duration: 700ms;
-  }
-}
-h1 {
-  font-family: sans-serif;
-  /* font-weight: var(--font-bold); */
-  
-  
-}
+
