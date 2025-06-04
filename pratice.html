@@ -71,7 +71,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <div class="flex items-center">
-            <span class="text-2xl font-['Pacifico'] text-primary">logo</span>
+              <img src="./images//mathlogo.png" alt="Logo" class="h-20 w-auto" />
           </div>
           <div class="flex items-center space-x-4">
             <a
@@ -96,17 +96,27 @@
       </div>
     </nav>
     <section
-      class="hero-bg h-screen flex items-center w-full relative overflow-hidden"
+      class="hero-bg h-[600px] flex items-center w-full relative overflow-hidden"
     >
       <!-- YouTube Background Video -->
-      <div class="absolute inset-0 overflow-hidden -z-10">
-        <iframe
-          class="w-full h-full absolute top-0 left-0 pointer-events-none"
-          src="https://www.youtube.com/embed/W9KHVlnJLjQ?controls=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&fs=0&autoplay=1&mute=1&loop=1&playlist=W9KHVlnJLjQ"
-          frameborder="0"
-          allow="autoplay; fullscreen"
-          allowfullscreen
-        ></iframe>
+     <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-[-1]">
+<div style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; overflow: hidden; z-index: -1;">
+  <img
+    id="video-placeholder"
+    src="https://img.youtube.com/vi/W9KHVlnJLjQ/maxresdefault.jpg"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 10;"
+    alt="Video placeholder"
+  />
+ <iframe
+  class="absolute top-0 left-0 w-full h-full pointer-events-none"
+  src="https://www.youtube.com/embed/W9KHVlnJLjQ?start=835&autoplay=1&mute=1&loop=1&playlist=W9KHVlnJLjQ&controls=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&fs=0"
+  frameborder="0"
+  allow="autoplay"
+  allowfullscreen
+></iframe>
+</div>
+</div>
+
         <!-- Optional dark overlay -->
         <div class="absolute inset-0 bg-black/50 z-[-5]"></div>
       </div>
@@ -132,7 +142,8 @@
               >Explore Tools</a
             >
             <a
-              href=""
+              href="https://www.youtube.com/watch?v=NuyzuNBFWxQ&pp=ygUhaW50cm9kdWN0aW9uIHRvIGNyeXB0b2dyYXBoeSBtYXRo"
+              target="_blank"
               class="bg-white text-gray-800 px-6 py-3 rounded !rounded-button font-medium border border-gray-200 hover:bg-gray-50 transition-colors whitespace-nowrap"
               >Learn More</a
             >
@@ -461,11 +472,11 @@
         </div>
       </div>
     </section>
-    <footer class="bg-gray-50 pt-16 pb-8">
+    <footer class="bg-gray-100 pt-16 pb-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-3 gap-8 mb-12">
           <div>
-            <div class="text-2xl font-['Pacifico'] text-primary mb-4">logo</div>
+             <img src="./images/mathlogo.png" alt="Logo" class="h-20 w-auto" />
             <p class="text-gray-600 mb-4">
               A comprehensive platform for exploring discrete mathematics
               concepts through interactive tools and resources.
@@ -595,5 +606,14 @@
         });
       });
     </script>
+   <script>
+  // Hide placeholder after 3 seconds (adjust if needed)
+  setTimeout(() => {
+    const placeholder = document.getElementById('video-placeholder');
+    if (placeholder) {
+      placeholder.style.display = 'none';
+    }
+  }, 3000);
+</script>
   </body>
 </html>
